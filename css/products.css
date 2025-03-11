@@ -1,0 +1,324 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: Roboto;
+}
+
+
+
+.card-container {
+  margin-top: 50px !important;
+  display: flex !important; /* Keep cards in a row */
+  overflow-x: auto !important; /* Enable horizontal scrolling */
+  margin-left: 50px !important;
+  margin-inline: 1.5rem !important;
+  padding-block: 5rem !important;
+  width: 100% !important; /* Full width */
+  scroll-snap-type: x mandatory; /* Optional, for smooth snapping of cards */
+  
+}
+
+.card {
+  width: 320px !important; /* Fixed width for each card */
+  background-color: whitesmoke !important;
+  border-radius: 10px !important;
+  overflow: hidden !important;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2) !important;
+  margin: 20px !important; /* Space between cards */
+  flex-shrink: 0 !important; /* Prevent cards from shrinking */
+  display: flex !important;
+  flex-direction: column !important;
+  
+}
+
+.slider-container {
+  display: flex; 
+  align-items: center; /* Aligns text and cards vertically */
+  gap: 50px; /* Space between text and first card */
+  width: 100%;
+  padding: 20px;
+}
+
+#slider {
+  text-align: left; /* Align text to the left */
+  max-width: 300px;
+  margin: 50px; /* Prevents text from stretching too much */
+}
+
+#slider h2 {
+  
+  font-size: 80px;
+  font-weight: bold;
+  margin-bottom: 10px; 
+  margin-top: px;/* Adjust spacing */
+  font-family: 'Roboto';
+}
+
+#slider h4 {
+  color: lightseagreen;
+  font-size: 50px;
+  font-weight: bold;
+  
+}
+
+.card-container {
+  display: flex; 
+  overflow-x: auto; /* Allows horizontal scrolling */
+  gap: 5px; /* Space between cards */
+  scroll-snap-type: x mandatory; /* Smooth snapping */
+}
+
+.card-container::-webkit-scrollbar{
+    width: 0;
+}
+
+.card img {
+  width: 100% !important;
+  height: auto !important;
+}
+
+.card-content {
+  padding: 16px !important;
+}
+
+.card-content h3{
+  color: black;
+  font-weight: 500;
+}
+
+
+.card-content {
+  font-size: 18px !important;
+  margin-bottom: 8px !important;
+}
+
+.card-content p {
+  margin-top: 10px;
+  color: #666 !important;
+  font-size: 14px !important;
+  min-height: 80px;
+}
+
+.card-content .btn{
+    display: inline-block;
+    padding: 8px;    
+    text-decoration: none;
+    border-radius: 4px;
+    margin-top: 16px;
+    color: black;
+    font-family: Roboto;
+    
+    
+}
+
+
+button:hover {
+  background: #ffcc00;
+  transition: 0.5s;
+}
+button:hover {
+  color: white;
+}
+
+.des_Guide {
+  margin-top: 80px;
+  margin-left: 10px;
+  
+}
+.des_Guide h2 {
+  margin-left: 40px;
+  margin-top: -50px;
+  margin-bottom: 50px;
+  font-weight: 800;
+  font-size: 52px;
+  color: black;
+  font-family: Roboto;
+}
+
+.des_Guide h4 {
+  margin-left: 40px;
+  margin-top: -50px;
+  margin-bottom: 50px;
+  font-weight: 600;
+  font-size: 52px;
+  color: black;
+  font-family: Roboto;
+}
+
+.des_Guide h5 {
+  margin-left: 40px;
+  margin-top: -50px;
+  margin-bottom: 50px;
+  text-align: left;
+  font-family: Roboto;
+  color: black;
+  font-size: 15px;
+}
+
+
+.container2 {
+    display: grid;
+    place-items: center;
+    margin-inline: 1.5rem;
+    padding-block: 5rem;
+    display: grid;
+    margin-left: 500px;
+    margin-top: -500px;  
+    margin-bottom: -150px;
+    padding: 2rem;
+    
+  }
+  
+  .card2__container {
+    display: flex;
+    row-gap: 3.5rem;
+    justify-content: flex-end; /* Align to the right */
+  }
+  
+  .card2__article {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .card2__img {
+    width: 1000px !important;
+    height: auto !important;
+    border-radius: 1.5rem !important;
+  }
+  
+  .card2__data {
+    width: 150px !important;
+    background-color: var(--container-color);
+    padding: 1rem 2rem;
+    box-shadow: 0 8px 24px hsla(0, 0%, 0%, 0.15);
+    border-radius: 1rem;
+    position: absolute;
+    bottom: -9rem;
+    left: 0;
+    right: 0;
+    margin-inline: auto;
+    opacity: 0;
+    transition: opacity 1s 1s;
+  }
+  
+  .card2__description {
+    display: block;
+    font-size: var(--small-font-size);
+    margin-bottom: 0.25rem;
+    font-family: Roboto;
+  }
+  
+  .card2__title {
+    font-size: var(--h5-font-size);
+    font-weight: 500;
+    color: var(--title-color);
+    margin-bottom: 0.75rem;
+    font-family: Roboto;
+  }
+  
+  .card2__button {
+    text-decoration: none;
+    font-size: var(--small-font-size);
+    font-weight: 500;
+    color: var(--first-color);
+  }
+  
+  .card2__button:hover {
+    text-decoration: underline;
+  }
+  
+  /* Naming animations in hover */
+  .card2__article:hover .card2__data {
+    animation: show-data 1s forwards;
+    opacity: 1;
+    transition: opacity 0.3s;
+  }
+  
+  .card2__article:hover {
+    animation: remove-overflow 2s forwards;
+  }
+  
+  .card2__article:not(:hover) {
+    animation: show-overflow 2s forwards;
+  }
+  
+  .card2__article:not(:hover) .card2__data {
+    animation: remove-data 1s forwards;
+  }
+/* Card animation */
+@keyframes show-data {
+    50% {
+      transform: translateY(-10rem);
+    }
+    100% {
+      transform: translateY(-7rem);
+    }
+  }
+  
+  @keyframes remove-overflow {
+    to {
+      overflow: initial;
+    }
+  }
+  
+  @keyframes remove-data {
+    0% {
+      transform: translateY(-7rem);
+    }
+    50% {
+      transform: translateY(-10rem);
+    }
+    100% {
+      transform: translateY(0.5rem);
+    }
+  }
+  
+  @keyframes show-overflow {
+    0% {
+      overflow: initial;
+      pointer-events: none;
+    }
+    50% {
+      overflow: hidden;
+    }
+  }
+  
+  /*=============== BREAKPOINTS ===============*/
+  /* For small devices */
+  @media screen and (max-width: 340px) {
+    .container2 {
+      margin-inline: 1rem;
+    }
+  
+    .card2__data {
+      width: 250px;
+      padding: 1rem;
+    }
+  }
+  
+  /* For medium devices */
+  @media screen and (min-width: 768px) {
+    .card2__container {
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 1.5rem;
+    }
+  }
+  
+  /* For large devices */
+  @media screen and (min-width: 1120px) {
+    .container2 {
+      height: 100vh;
+    }
+  
+    .card2__container {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    .card2__img {
+      width: 348px;
+    }
+    .card2__data {
+      width: 316px;
+      padding-inline: 2.5rem;
+    }
+  }
