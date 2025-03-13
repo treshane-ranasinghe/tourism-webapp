@@ -884,7 +884,7 @@ ul li a:hover {
 
   .card-container {
     margin-top: 600px !important;
-    display: fle;
+  
     flex-wrap: wrap;
     justify-content: center;
     margin-left: 0 !important;
@@ -894,7 +894,7 @@ ul li a:hover {
   }
 
   .card {
-    width: 70% !important;
+    width: 50% !important;
     margin: 10px 0 !important;
   }
 
